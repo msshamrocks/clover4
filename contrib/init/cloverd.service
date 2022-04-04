@@ -1,0 +1,26 @@
+[Unit]
+Description=CLOVER's distributed currency daemon
+After=network.target
+
+[Service]
+User=clover
+Group=clover
+
+Type=forking
+PIDFile=/var/lib/cloverd/cloverd.pid
+
+ExecStart=/usr/bin/cloverd -daemon -pid=/var/lib/cloverd/cloverd.pid \
+          -conf=/etc/clover/clover.conf -datadir=/var/lib/cloverd
+
+ExecStop=-/usr/bin/clover-cli -conf=/etc/clover/clover.conf \
+         -datadir=/var/lib/cloverd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

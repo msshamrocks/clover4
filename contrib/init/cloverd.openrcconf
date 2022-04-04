@@ -1,0 +1,26 @@
+# /etc/conf.d/cloverd: config file for /etc/init.d/cloverd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/clover/clover.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/cloverd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/cloverd.pid"
+
+# Where to write cloverd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/cloverd"
+
+# User and group to own cloverd process
+#BITCOIND_USER="clover"
+#BITCOIND_GROUP="clover"
+
+# Path to cloverd executable
+#BITCOIND_BIN="/usr/bin/cloverd"
+
+# Nice value to run cloverd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Clover
+Comment=Clover P2P Cryptocurrency
+Comment[fr]=Clover, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Clover, eşten eşe kriptografik sanal para birimi
+Exec=clover-qt %u
+Terminal=false
+Type=Application
+Icon=clover128
+MimeType=x-scheme-handler/clover;
+Categories=Office;Finance;
